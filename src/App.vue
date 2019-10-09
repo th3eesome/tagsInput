@@ -2,16 +2,20 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="testfield">
+      <tags-input :separators="'Comma Space'"></tags-input>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HelloWorld from './components/HelloWorld.vue';
+import tagsInput from './components/tagsInput.vue';
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    tagsInput
   }
 }
 </script>
@@ -25,4 +29,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.testfield {
+  display: flex;
+  justify-content: center
+}
+
 </style>
